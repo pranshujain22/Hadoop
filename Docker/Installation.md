@@ -4,13 +4,17 @@ Go to [Docker Distributions](https://download.docker.com/linux/ubuntu/dists/), c
 
 Install Docker CE, changing the path below to the path where you downloaded the Docker package.
 
-> sudo dpkg -i /path/to/package.deb
+```shell
+sudo dpkg -i /path/to/package.deb
+```
 
 The Docker daemon starts automatically.
 
 Verify that Docker CE is installed correctly by running the hello-world image.
 
-> sudo docker run hello-world
+```shell
+sudo docker run hello-world
+```
 
 This command downloads a test image and runs it in a container. 
 When the container runs, it prints an informational message and exits.
@@ -22,17 +26,23 @@ The docker group is created but no users are added to it. You need to use sudo t
 
 Create the docker group.
 
-> sudo groupadd docker
+```shell
+sudo groupadd docker
+```
 
 Add your user to the docker group.
 
-> sudo usermod -aG docker $USER
+```shell
+sudo usermod -aG docker $USER
+```
 
 Log out and log back in so that your group membership is re-evaluated.
 
 Verify that you can run docker commands without sudo.
 
-> docker run hello-world
+```shell
+docker run hello-world
+```
 
 This command downloads a test image and runs it in a container. 
 When the container runs, it prints an informational message and exits.
